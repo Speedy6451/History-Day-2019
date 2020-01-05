@@ -3,18 +3,32 @@
 	--color-two: #9c9999;
 	--color-three: #71706e;
 	--color-four: #292323;
+	--color-five: white;
+}
+
+@keyframes floatUp {
+	from {
+		opacity: 0;
+		transform: rotateX(-90deg);
+		transform: translate(0,100%);
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform: translate(0,0);
+	}
 }
 
 @keyframes floatDown {
 	from {
-		top -100%;
 		opacity: 0;
-		transform: rotateX(45deg);
+		transform: rotateX(90deg);
+		transform: translate(0,-100%);
 	}
 	to {
-		top 0%;
 		opacity: 1;
 		transform: rotateX(0deg);
+		transform: translate(0,0);
 	}
 }
 
@@ -23,7 +37,6 @@ body {
 }
 
 .header {
-	overflow: hidden;
 	background-color: var(--color-three);
 	padding: 10px;
 	border-radius: 5px;
@@ -45,6 +58,8 @@ body {
 	background-color: var(--color-two);
 	padding: 2px;
 	border-radius: 3px;
+	transition: 0.3s;
+	line-height: 30px;
 }
 
 .link:hover {
@@ -56,5 +71,11 @@ body {
 }
 
 .selected {
-	background-color: var(--color-four);
+	background-color: var(--color-four) !important;
+}
+
+.body {
+	position: absolute;
+	animation-name: floatUp;
+	animation-duration: 2s;
 }
