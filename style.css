@@ -1,0 +1,60 @@
+:root {
+	--color-one: #990303;
+	--color-two: #9c9999;
+	--color-three: #71706e;
+	--color-four: #292323;
+}
+
+@keyframes floatDown {
+	from {
+		top -100%;
+		opacity: 0;
+		transform: rotateX(45deg);
+	}
+	to {
+		top 0%;
+		opacity: 1;
+		transform: rotateX(0deg);
+	}
+}
+
+body {
+	background-color: var(--color-two);
+}
+
+.header {
+	overflow: hidden;
+	background-color: var(--color-three);
+	padding: 10px;
+	border-radius: 5px;
+	animation-name: floatDown;
+	animation-duration: 2s;
+}
+
+.title {
+	color: var(--color-one);
+	font-family: "Allerta Stencil";
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100; 
+}
+
+.link {
+	color: white;
+	background-color: var(--color-two);
+	padding: 2px;
+	border-radius: 3px;
+}
+
+.link:hover {
+	background-color: var(--color-three);
+}
+
+.link:active {
+	background-color: var(--color-four);
+}
+
+.selected {
+	background-color: var(--color-four);
+}
