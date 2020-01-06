@@ -9,13 +9,11 @@
 @keyframes floatUp {
 	from {
 		opacity: 0;
-		transform: rotateX(-90deg);
-		transform: translate(0,100%);
+		transform: rotateX(-90deg) translate(0,100%);
 	}
 	to {
 		opacity: 1;
-		transform: rotateX(0deg);
-		transform: translate(0,0);
+		transform: rotateX(0deg) translate(0,0);
 	}
 }
 
@@ -60,6 +58,7 @@ body {
 	border-radius: 3px;
 	transition: 0.3s;
 	line-height: 30px;
+	text-decoration: none;
 }
 
 .link:hover {
@@ -78,4 +77,5 @@ body {
 	position: absolute;
 	animation-name: floatUp;
 	animation-duration: 2s;
+	border-radius: 5px;
 }
