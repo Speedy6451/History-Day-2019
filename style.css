@@ -31,8 +31,21 @@
 	}
 }
 
+@keyframes wheeeeee {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position-y: 100%;
+  }
+}
 body {
 	background-color: var(--color-two);
+  /*background-image: url(https://previews.123rf.com/images/lazinina/lazinina1610/lazinina161000089/63710397-seamless-vector-camouflage-pattern-print-repeating-background-cloth-design-wallpaper-.jpg);*/
+  background-repeat: repeat;
+  background-size: 200px;
+  animation-name:  wheeeeee;
+
 	animation-duration: 2s;
 }
 
@@ -54,6 +67,7 @@ body {
 }
 
 .link {
+  white-space: nowrap;
 	color: white;
 	background-color: var(--color-two);
 	padding: 2px;
@@ -111,6 +125,53 @@ body {
   right: 0;
 }
 
-.quote div::before {
+ div.quote:before {
+   background-color: green;
+   width:10px;
+   height: 10px;
+}
 
+blockquote {
+  margin: 0 auto;
+  padding: 1em;
+  border-left: 5px solid var(--color-three);
+}
+blockquote:before {
+  display: none;
+}
+blockquote:not(:first-of-type) {
+  margin-top: .5em;
+}
+blockquote p {
+  color: var(--color-four);
+  opacity: 80%;
+  font-size: 12pt;
+  line-height: 1.4;
+  font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+}
+blockquote footer {
+  margin-top: .5em;
+  padding: 0;
+  color: var(--color-four);
+  opacity: 70%;
+  font-size: 12pt;
+  text-align: left;
+  font-style: italic;
+}
+blockquote footer:before {
+  content: '— ';
+}
+blockquote:nth-of-type(even) {
+  text-align: right;
+  border-left: none;
+  border-right: 5px solid #999;
+}
+blockquote:nth-of-type(even) footer {
+  text-align: right;
+}
+blockquote:nth-of-type(even) footer:before {
+  content: '';
+}
+blockquote:nth-of-type(even) footer:after {
+  content: ' —';
 }
