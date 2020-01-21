@@ -66,7 +66,14 @@ body {
 	font-weight: 100; 
 }
 
-.link {
+/*
+div.link {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+*/
+a.link {
   white-space: nowrap;
 	color: white;
 	background-color: var(--color-two);
@@ -99,6 +106,7 @@ body {
 	animation-name: floatUp; 
 	animation-duration: 2s;
 	border-radius: 5px;
+	width: 95%;
 }
 
 .p {
@@ -174,4 +182,40 @@ blockquote:nth-of-type(even) footer:before {
 }
 blockquote:nth-of-type(even) footer:after {
   content: ' —';
+}
+div .image {
+	padding: 5px;
+	border-radius: 5px;
+	background-color: var(--color-three);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	transition: all 1s;
+	position: absolute;
+}
+img.image {
+	max-width: 95%
+}
+div.image.open {
+	/*
+	margin-left: -50px;
+	margin-top: -50px;
+	*/
+	top 50%; left 50%;
+	transition: all 1s;
+	position: absolute;
+}
+@keyframes middle {
+	from {
+		transform: translate(0,0);
+		top 0; left: 0;
+		
+	}
+
+	to {
+		transform: translate(-50%, -50%);
+		top 50%; left 50%;
+		position: absolute;
+	}
 }
