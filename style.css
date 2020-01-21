@@ -143,6 +143,7 @@ blockquote {
   margin: 0 auto;
   padding: 1em;
   border-left: 5px solid var(--color-three);
+  float: left;
 }
 blockquote:before {
   display: none;
@@ -183,7 +184,8 @@ blockquote:nth-of-type(even) footer:before {
 blockquote:nth-of-type(even) footer:after {
   content: ' —';
 }
-div .image {
+div.image {
+  float:left;
 	padding: 5px;
 	border-radius: 5px;
 	background-color: var(--color-three);
@@ -193,29 +195,42 @@ div .image {
 	margin: 0;
 	transition: all 1s;
 	position: absolute;
+  max-width: 200px;
+}
+div.image div {
+    display: flex;
+  justify-content: center;
 }
 img.image {
-	max-width: 95%
+	max-width: 95%;
+  transform: 1s;
 }
 div.image.open {
 	/*
 	margin-left: -50px;
 	margin-top: -50px;
 	*/
-	top 50%; left 50%;
+	top: 50%; left: 50%;
 	transition: all 1s;
 	position: absolute;
+  animation-name: middle;
+  animation-duration: 1s;
+  transform: translate(-50%,-50%);
+  min-width: 80%;
+}
+div.image.open img{
+  width: 99%;
+}
+div.image p, h4 {
+  font-family: 'Stardos Stencil', cursive;
+  margin-left:5px;
 }
 @keyframes middle {
 	from {
 		transform: translate(0,0);
-		top 0; left: 0;
-		
 	}
 
 	to {
 		transform: translate(-50%, -50%);
-		top 50%; left 50%;
-		position: absolute;
 	}
 }
