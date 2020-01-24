@@ -111,6 +111,7 @@ a.link {
 
 .p {
   font-family: 'Stardos Stencil', cursive;
+  font-size: 14px;
   /*font-size: 9999999px;*/
 }
 
@@ -189,14 +190,19 @@ div.image {
 	padding: 5px;
 	border-radius: 5px;
 	background-color: var(--color-three);
-	position: absolute;
+	position: initial;
 	top: 0;
 	left: 0;
-	margin: 0;
 	transition: all 1s;
-	position: absolute;
   max-width: 200px;
+  margin: 1%;
 }
+/*
+div {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}*/
 div.image div {
     display: flex;
   justify-content: center;
@@ -213,17 +219,31 @@ div.image.open {
 	top: 50%; left: 50%;
 	transition: all 1s;
 	position: absolute;
+  /*
   animation-name: middle;
-  animation-duration: 1s;
+  animation-duration: 1s;*/
   transform: translate(-50%,-50%);
-  min-width: 80%;
+  max-width: 80%;
+  display: inline-block;
+  animation-name: dance;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 div.image.open img{
-  width: 99%;
+  max-width: 99%;
+  max-height: 80vh;
 }
 div.image p, h4 {
   font-family: 'Stardos Stencil', cursive;
   margin-left:5px;
+}
+@keyframes dance {
+  from {
+    transform: scale3d(50%,200%,46%) rotateX(30%) rotateY(60%) rotateZ(60%);
+  }
+  to {
+    transform: scale3d(1,1,1) rotate3d(0,0,0)
+    }
 }
 @keyframes middle {
 	from {
@@ -235,5 +255,5 @@ div.image p, h4 {
 	}
 }
 
-div.test {
+div.test {}
 

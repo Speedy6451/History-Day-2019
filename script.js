@@ -1,4 +1,5 @@
 function click(elem) {
+  console.log("l");
 	elem.classList.toggle("open");
 }
 function answer(txt){
