@@ -157,7 +157,7 @@ blockquote p {
   opacity: 80%;
   font-size: 12pt;
   line-height: 1.4;
-  font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  /*font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;*/
 }
 blockquote footer {
   margin-top: .5em;
@@ -237,23 +237,3 @@ div.image p, h4 {
   font-family: 'Stardos Stencil', cursive;
   margin-left:5px;
 }
-@keyframes dance {
-  from {
-    transform: scale3d(50%,200%,46%) rotateX(30%) rotateY(60%) rotateZ(60%);
-  }
-  to {
-    transform: scale3d(1,1,1) rotate3d(0,0,0)
-    }
-}
-@keyframes middle {
-	from {
-		transform: translate(0,0);
-	}
-
-	to {
-		transform: translate(-50%, -50%);
-	}
-}
-
-div.test {}
-
